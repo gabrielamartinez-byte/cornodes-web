@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Servicios Técnicos | Corenodes Tech</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-950 text-slate-200 font-sans min-h-screen flex flex-col justify-between">
+  <header class="border-b border-slate-800 bg-slate-950/90 sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+      <a href="index.html" class="text-2xl font-bold tracking-tight text-white flex items-center gap-2">
+        <span class="w-3.5 h-3.5 rounded-full bg-blue-500"></span>Corenodes<span class="text-blue-500">.tech</span>
+      </a>
+      <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-slate-300">
+        <a href="servicios.html" class="text-blue-400 font-semibold">Servicios</a>
+        <a href="infraestructura.html" class="hover:text-blue-400 transition">Infraestructura</a>
+        <a href="seguridad.html" class="hover:text-blue-400 transition">Seguridad</a>
+        <a href="planes.html" class="hover:text-blue-400 transition">Planes</a>
+        <a href="nosotros.html" class="hover:text-blue-400 transition">Nosotros</a>
+        <a href="contacto.html" class="hover:text-blue-400 transition">Contacto</a>
+      </nav>
+      <div><a href="contacto.html" class="bg-blue-600 hover:bg-blue-500 text-white text-sm font-semibold px-5 py-2.5 rounded-lg transition">Portal Clientes</a></div>
+    </div>
+  </header>
+
+  <main class="max-w-7xl mx-auto px-6 py-16">
+    <div class="max-w-3xl mb-16">
+      <h1 class="text-4xl font-extrabold text-white mb-4">Catálogo de Servicios Técnicos</h1>
+      <p class="text-slate-400 text-lg leading-relaxed">
+        Soluciones especializadas en ingeniería de sistemas Linux, despliegue de pasarelas de correo empresariales y securización de red.
+      </p>
+    </div>
+
+    <div class="space-y-12">
+      <div class="bg-slate-900/60 border border-slate-800 p-8 rounded-2xl">
+        <h2 class="text-2xl font-bold text-white mb-3">1. Despliegue de Instancias Linux & Hardening</h2>
+        <p class="text-slate-400 text-sm leading-relaxed mb-4">
+          Aprovisionamos sistemas operativos basados en Linux (Ubuntu 22.04/24.04 LTS, Debian 12, Rocky Linux) con parámetros de seguridad reforzados. Inhabilitamos la autenticación por contraseña SSH en favor de llaves Ed25519, configuramos puertos alternativos de administración y parametrizamos límites de recursos de CPU y memoria.
+        </p>
+        <div class="grid md:grid-cols-2 gap-4 text-xs text-slate-400">
+          <div class="bg-slate-950 p-4 rounded-xl border border-slate-800/60">✔ Deshabilitación de login directo como root</div>
+          <div class="bg-slate-950 p-4 rounded-xl border border-slate-800/60">✔ Optimización de swappiness y parámetros de red sysctl</div>
+        </div>
+      </div>
+
+      <div class="bg-slate-900/60 border border-slate-800 p-8 rounded-2xl">
+        <h2 class="text-2xl font-bold text-white mb-3">2. Enrutamiento SMTP & Gestión de Entregabilidad</h2>
+        <p class="text-slate-400 text-sm leading-relaxed mb-4">
+          Diseñamos arquitecturas para envío transaccional legítimo (alertas de plataformas, reportes y confirmaciones). Vinculamos registros DNS inversos (PTR) validados con los registros A del servidor emisor, evitando bloqueos y caídas en carpetas de correo no deseado.
+        </p>
+        <div class="grid md:grid-cols-2 gap-4 text-xs text-slate-400">
+          <div class="bg-slate-950 p-4 rounded-xl border border-slate-800/60">✔ Generación e inserción de llaves DKIM de 2048 bits</div>
+          <div class="bg-slate-950 p-4 rounded-xl border border-slate-800/60">✔ Políticas DMARC estrictas con informes agregados RUA/RUF</div>
+        </div>
+      </div>
+
+      <div class="bg-slate-900/60 border border-slate-800 p-8 rounded-2xl">
+        <h2 class="text-2xl font-bold text-white mb-3">3. Mitigación de Amenazas & Firewalls</h2>
+        <p class="text-slate-400 text-sm leading-relaxed mb-4">
+          Implementación de reglas de inspección a nivel de kernel mediante nftables e iptables, complementadas con monitoreo activo de intentos de autenticación maliciosa para bloqueo automático de subredes atacantes.
+        </p>
+        <div class="grid md:grid-cols-2 gap-4 text-xs text-slate-400">
+          <div class="bg-slate-950 p-4 rounded-xl border border-slate-800/60">✔ Protección contra ataques de denegación SYN Flood</div>
+          <div class="bg-slate-950 p-4 rounded-xl border border-slate-800/60">✔ Reglas dinámicas con fail2ban y geobloqueo CIDR</div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="border-t border-slate-800 py-10 bg-slate-950 text-center text-sm text-slate-500">
+    &copy; 2026 CoreNodes Tech. Infraestructura empresarial verificada.
+  </footer>
+</body>
+</html>
