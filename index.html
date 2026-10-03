@@ -1,87 +1,345 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Corenodes Tech | Infraestructura Cloud & Servicios de Red</title>
+  <title>Corenodes Tech | Infraestructura Cloud, Servidores Dedicados y Redes</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-slate-950 text-slate-100 font-sans min-h-screen flex flex-col justify-between">
+<body class="bg-slate-950 text-slate-200 font-sans antialiased selection:bg-blue-600 selection:text-white">
 
-  <!-- Header -->
-  <header class="border-b border-slate-800 bg-slate-900/50 backdrop-blur sticky top-0 z-50">
-    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-      <div class="text-xl font-bold tracking-tight text-white flex items-center gap-2">
-        <span class="w-3 h-3 rounded-full bg-blue-500 animate-pulse"></span>
+  <!-- Header / Barra de Navegación -->
+  <header class="border-b border-slate-800 bg-slate-950/80 backdrop-blur-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+      <a href="#" class="text-2xl font-bold tracking-tight text-white flex items-center gap-2">
+        <span class="w-3.5 h-3.5 rounded-full bg-blue-500 animate-pulse"></span>
         Corenodes<span class="text-blue-500">.tech</span>
-      </div>
-      <nav class="hidden md:flex gap-6 text-sm text-slate-400">
-        <a href="#servicios" class="hover:text-white transition">Servicios</a>
-        <a href="#infraestructura" class="hover:text-white transition">Infraestructura</a>
-        <a href="#contacto" class="hover:text-white transition">Contacto</a>
+      </a>
+      <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-slate-300">
+        <a href="#servicios" class="hover:text-blue-400 transition">Servicios</a>
+        <a href="#infraestructura" class="hover:text-blue-400 transition">Infraestructura</a>
+        <a href="#seguridad" class="hover:text-blue-400 transition">Seguridad</a>
+        <a href="#planes" class="hover:text-blue-400 transition">Planes</a>
+        <a href="#nosotros" class="hover:text-blue-400 transition">Nosotros</a>
+        <a href="#contacto" class="hover:text-blue-400 transition">Contacto</a>
       </nav>
+      <div class="flex items-center gap-4">
+        <a href="#contacto" class="bg-blue-600 hover:bg-blue-500 text-white text-sm font-semibold px-5 py-2.5 rounded-lg transition shadow-lg shadow-blue-600/25">
+          Portal Clientes
+        </a>
+      </div>
     </div>
   </header>
 
   <!-- Hero Section -->
-  <main class="max-w-6xl mx-auto px-6 py-20">
-    <div class="text-center max-w-3xl mx-auto">
-      <span class="inline-block py-1 px-3 rounded-full text-xs font-semibold bg-blue-500/10 text-blue-400 border border-blue-500/20 mb-4">
-        Soluciones de Infraestructura & Cloud Hosting
-      </span>
-      <h1 class="text-4xl md:text-5xl font-extrabold text-white tracking-tight leading-tight mb-6">
-        Gestión técnica de servidores y despliegues Linux en la nube
+  <section class="relative overflow-hidden py-24 border-b border-slate-900">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <div class="inline-flex items-center gap-2 py-1 px-3 rounded-full text-xs font-semibold bg-blue-500/10 text-blue-400 border border-blue-500/20 mb-6">
+        <span class="w-2 h-2 rounded-full bg-blue-400"></span>
+        Infraestructura Cloud Empresarial & Redes de Alto Rendimiento
+      </div>
+      <h1 class="text-4xl sm:text-6xl font-extrabold text-white tracking-tight leading-tight max-w-4xl mx-auto mb-6">
+        Servicios de cómputo, despliegue Linux y gestión de red sin interrupciones
       </h1>
-      <p class="text-slate-400 text-lg mb-8 leading-relaxed">
-        Especialistas en administración de instancias dedicadas, configuración de servicios de red, políticas de seguridad perimetral y soporte DevOps para entornos de alta disponibilidad.
+      <p class="text-slate-400 text-lg sm:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
+        Diseñamos, aprovisionamos y mantenemos clústeres de servidores dedicados, enrutamiento avanzado, pasarelas de mensajería empresarial y arquitecturas cloud resilientes.
       </p>
-      <div class="flex justify-center gap-4">
-        <a href="#contacto" class="bg-blue-600 hover:bg-blue-500 text-white font-medium px-6 py-3 rounded-lg transition shadow-lg shadow-blue-600/30">
-          Consultar soporte
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="#servicios" class="bg-blue-600 hover:bg-blue-500 text-white font-medium px-8 py-3.5 rounded-lg transition shadow-lg shadow-blue-600/30">
+          Explorar Servicios
+        </a>
+        <a href="#infraestructura" class="bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-800 font-medium px-8 py-3.5 rounded-lg transition">
+          Ver Arquitectura
         </a>
       </div>
     </div>
+  </section>
 
-    <!-- Servicios -->
-    <div id="servicios" class="grid md:grid-cols-3 gap-8 mt-24">
-      <div class="bg-slate-900/70 border border-slate-800 p-6 rounded-xl">
-        <div class="text-blue-400 text-2xl mb-4 font-mono">&gt;_</div>
-        <h3 class="text-lg font-bold text-white mb-2">Despliegue de Servidores</h3>
-        <p class="text-sm text-slate-400 leading-relaxed">
-          Configuración inicial, hardening y optimización de nodos Linux (Ubuntu/Debian) para entornos de producción.
-        </p>
+  <!-- Métricas Rápidas -->
+  <section class="border-b border-slate-800 bg-slate-900/30 py-12">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+      <div>
+        <p class="text-3xl font-extrabold text-white">99.98%</p>
+        <p class="text-xs uppercase tracking-wider text-slate-400 mt-1">Disponibilidad SLA</p>
+      </div>
+      <div>
+        <p class="text-3xl font-extrabold text-blue-400">&lt; 15ms</p>
+        <p class="text-xs uppercase tracking-wider text-slate-400 mt-1">Latencia troncal</p>
+      </div>
+      <div>
+        <p class="text-3xl font-extrabold text-white">Tier-3+</p>
+        <p class="text-xs uppercase tracking-wider text-slate-400 mt-1">Data Centers</p>
+      </div>
+      <div>
+        <p class="text-3xl font-extrabold text-blue-400">24/7/365</p>
+        <p class="text-xs uppercase tracking-wider text-slate-400 mt-1">Monitoreo NOC</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección 1: Servicios Detallados -->
+  <section id="servicios" class="py-24 border-b border-slate-900">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-xs uppercase font-bold tracking-widest text-blue-400 mb-2">Servicios Técnicos</h2>
+        <p class="text-3xl sm:text-4xl font-bold text-white">Soluciones integrales de administración de sistemas</p>
+        <p class="text-slate-400 mt-4">Proveemos soporte operacional y configuraciones a medida en entornos de producción Linux y redes públicas.</p>
       </div>
 
-      <div class="bg-slate-900/70 border border-slate-800 p-6 rounded-xl">
-        <div class="text-blue-400 text-2xl mb-4 font-mono">#_</div>
-        <h3 class="text-lg font-bold text-white mb-2">Gestión de Redes & Puertos</h3>
-        <p class="text-sm text-slate-400 leading-relaxed">
-          Monitoreo de tráfico, asignación de registros DNS/rDNS y gestión segura de servicios SMTP, SSH y web.
-        </p>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-slate-900/60 border border-slate-800 p-8 rounded-2xl hover:border-slate-700 transition">
+          <div class="w-12 h-12 bg-blue-500/10 rounded-xl flex items-center justify-center text-blue-400 font-mono text-xl font-bold mb-6">&gt;_</div>
+          <h3 class="text-xl font-semibold text-white mb-3">Aprovisionamiento VPS & Dedicados</h3>
+          <p class="text-sm text-slate-400 leading-relaxed mb-4">
+            Instalación, compilación de kernels y parametrización de instancias Debian, Ubuntu Server y AlmaLinux con estrictas políticas de acceso SSH vía llaves criptográficas.
+          </p>
+          <ul class="text-xs text-slate-500 space-y-2">
+            <li>• Optimización de memoria RAM y Swap</li>
+            <li>• Particionamiento seguro LVM/ext4</li>
+            <li>• Automatización vía Cloud-init</li>
+          </ul>
+        </div>
+
+        <div class="bg-slate-900/60 border border-slate-800 p-8 rounded-2xl hover:border-slate-700 transition">
+          <div class="w-12 h-12 bg-blue-500/10 rounded-xl flex items-center justify-center text-blue-400 font-mono text-xl font-bold mb-6">#_</div>
+          <h3 class="text-xl font-semibold text-white mb-3">Enrutamiento & Servicios de Correo</h3>
+          <p class="text-sm text-slate-400 leading-relaxed mb-4">
+            Configuración de servidores SMTP transaccionales (Postfix, Dovecot), asignación de rDNS/PTR y autenticación perimetral estricta para garantizar entregabilidad.
+          </p>
+          <ul class="text-xs text-slate-500 space-y-2">
+            <li>• Registros SPF, DKIM (2048-bit) y DMARC</li>
+            <li>• Enrutamiento TLS 1.3 forzado</li>
+            <li>• Monitorización de listas negras (RBL/DNSBL)</li>
+          </ul>
+        </div>
+
+        <div class="bg-slate-900/60 border border-slate-800 p-8 rounded-2xl hover:border-slate-700 transition">
+          <div class="w-12 h-12 bg-blue-500/10 rounded-xl flex items-center justify-center text-blue-400 font-mono text-xl font-bold mb-6">~_</div>
+          <h3 class="text-xl font-semibold text-white mb-3">Seguridad Perimetral & Firewalls</h3>
+          <p class="text-sm text-slate-400 leading-relaxed mb-4">
+            Gestión de reglas Iptables/NFTables, mitigación DDoS L3/L4 y filtrado proactivo de ataques de fuerza bruta con sistemas de prevención Fail2ban.
+          </p>
+          <ul class="text-xs text-slate-500 space-y-2">
+            <li>• Aislamiento de puertos no estándar</li>
+            <li>• Inspección de paquetes y límites de conexión</li>
+            <li>• Auditorías de vulnerabilidades OpenVAS</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección 2: Infraestructura Técnica -->
+  <section id="infraestructura" class="py-24 border-b border-slate-900 bg-slate-950">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-xs uppercase font-bold tracking-widest text-blue-400 mb-2">Arquitectura de Red</h2>
+          <h3 class="text-3xl font-bold text-white mb-6">Infraestructura conectada a los principales puntos de intercambio</h3>
+          <p class="text-slate-400 text-sm leading-relaxed mb-6">
+            Nuestros despliegues aprovechan enlaces troncales redundantes de fibra óptica con soporte nativo IPv4 e IPv6. Supervisamos continuamente el enrutamiento BGP para reducir saltos y mitigar saturaciones de tráfico.
+          </p>
+          <div class="space-y-4">
+            <div class="border border-slate-800 bg-slate-900/40 p-4 rounded-xl">
+              <h4 class="text-white font-medium text-sm">Zonas de DNS con baja latencia</h4>
+              <p class="text-xs text-slate-400 mt-1">Zonas propagadas globalmente con resolución Anycast para resolver solicitudes de registros en milisegundos.</p>
+            </div>
+            <div class="border border-slate-800 bg-slate-900/40 p-4 rounded-xl">
+              <h4 class="text-white font-medium text-sm">Respaldo térmico y energía continua N+1</h4>
+              <p class="text-xs text-slate-400 mt-1">Centros de datos con certificación Tier 3 respaldados por generadores diésel y doble acometida eléctrica.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 font-mono text-xs text-slate-300 shadow-2xl">
+          <div class="flex items-center gap-2 border-b border-slate-800 pb-3 mb-4 text-slate-500">
+            <span class="w-3 h-3 rounded-full bg-red-500/80"></span>
+            <span class="w-3 h-3 rounded-full bg-yellow-500/80"></span>
+            <span class="w-3 h-3 rounded-full bg-green-500/80"></span>
+            <span class="ml-2 text-xs">network-status-corenodes.log</span>
+          </div>
+          <p class="text-green-400">[OK] BGP Session 1: AS-UPSTREAM ESTABLISHED (Prefixes: 945,120)</p>
+          <p class="text-green-400">[OK] IPv4 Gateway: 172.105.0.1 (RTT 0.8ms)</p>
+          <p class="text-green-400">[OK] IPv6 Gateway: 2600:3c00::1 (RTT 0.7ms)</p>
+          <p class="text-blue-400">[INFO] PTR Status: corenodes.tech matching A-Record</p>
+          <p class="text-blue-400">[INFO] Port 25 outbound filter: Verification Ready</p>
+          <p class="text-slate-400">[METRIC] Interfaces load: eth0 IN: 1.2Gbps / OUT: 840Mbps</p>
+          <p class="text-green-400">[READY] Core routing engines operational.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección 3: Seguridad & Buenas Prácticas -->
+  <section id="seguridad" class="py-24 border-b border-slate-900 bg-slate-900/20">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-xs uppercase font-bold tracking-widest text-blue-400 mb-2">Seguridad & Políticas</h2>
+        <p class="text-3xl font-bold text-white">Cumplimiento estricto contra abusos y spam</p>
+        <p class="text-slate-400 mt-4">Mantener la reputación de las direcciones IP es nuestra máxima prioridad técnica.</p>
       </div>
 
-      <div class="bg-slate-900/70 border border-slate-800 p-6 rounded-xl">
-        <div class="text-blue-400 text-2xl mb-4 font-mono">@_</div>
-        <h3 class="text-lg font-bold text-white mb-2">Copias de Seguridad & Continuidad</h3>
-        <p class="text-sm text-slate-400 leading-relaxed">
-          Políticas automatizadas de resguardo periódico de datos y restauración de servicios críticos sin tiempo de inactividad.
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="border border-slate-800 bg-slate-900/60 p-6 rounded-2xl">
+          <h4 class="text-lg font-semibold text-white mb-2">Tolerancia Cero al Envío Masivo No Solicitado (UCE)</h4>
+          <p class="text-sm text-slate-400 leading-relaxed">
+            Solo operamos servidores con tráfico transaccional legítimo (notificaciones de sistema, alertas transaccionales corporativas y correspondencia autenticada de usuario único). Prohibimos expresamente listas frías o campañas publicitarias no solicitadas.
+          </p>
+        </div>
+        <div class="border border-slate-800 bg-slate-900/60 p-6 rounded-2xl">
+          <h4 class="text-lg font-semibold text-white mb-2">Autenticación Criptográfica de Dominio</h4>
+          <p class="text-sm text-slate-400 leading-relaxed">
+            Cada paquete de correo saliente debe firmarse con llaves DKIM de 2048 bits validadas mediante registros TXT de DNS, alineadas con políticas DMARC estrictas en modo cuarentena o rechazo.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección 4: Planes de Soporte -->
+  <section id="planes" class="py-24 border-b border-slate-900">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-xs uppercase font-bold tracking-widest text-blue-400 mb-2">Suscripciones</h2>
+        <p class="text-3xl font-bold text-white">Planes de administración de infraestructura</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Plan 1 -->
+        <div class="bg-slate-900/40 border border-slate-800 p-8 rounded-2xl">
+          <h3 class="text-lg font-bold text-white">Instancia Simple</h3>
+          <p class="text-xs text-slate-400 mt-1">Para proyectos y nodos individuales</p>
+          <div class="text-3xl font-extrabold text-white my-6">$29 <span class="text-xs font-normal text-slate-400">/mes</span></div>
+          <ul class="text-sm text-slate-400 space-y-3 mb-8">
+            <li>✔ Hardening inicial del sistema operativo</li>
+            <li>✔ Configuración de firewall y SSH</li>
+            <li>✔ Respaldos semanales automáticos</li>
+            <li>✔ Soporte por ticket técnico</li>
+          </ul>
+          <a href="#contacto" class="block text-center py-2.5 bg-slate-800 hover:bg-slate-700 text-white rounded-lg text-sm font-semibold transition">Solicitar</a>
+        </div>
+
+        <!-- Plan 2 -->
+        <div class="bg-slate-900/90 border-2 border-blue-500 p-8 rounded-2xl relative shadow-xl shadow-blue-500/10">
+          <span class="absolute -top-3 right-6 bg-blue-500 text-slate-950 font-bold text-[10px] uppercase px-2.5 py-1 rounded-full">Recomendado</span>
+          <h3 class="text-lg font-bold text-white">Infraestructura Pro</h3>
+          <p class="text-xs text-slate-400 mt-1">Para servidores con servicios de correo y red</p>
+          <div class="text-3xl font-extrabold text-white my-6">$79 <span class="text-xs font-normal text-slate-400">/mes</span></div>
+          <ul class="text-sm text-slate-400 space-y-3 mb-8">
+            <li>✔ Todo lo del plan Simple</li>
+            <li>✔ Pila completa de correo (SPF, DKIM, DMARC, rDNS)</li>
+            <li>✔ Monitoreo de reputación de IP continuo</li>
+            <li>✔ Respaldos diarios incrementales</li>
+            <li>✔ Soporte prioritario 24/7</li>
+          </ul>
+          <a href="#contacto" class="block text-center py-2.5 bg-blue-600 hover:bg-blue-500 text-white rounded-lg text-sm font-semibold transition">Solicitar</a>
+        </div>
+
+        <!-- Plan 3 -->
+        <div class="bg-slate-900/40 border border-slate-800 p-8 rounded-2xl">
+          <h3 class="text-lg font-bold text-white">Clúster Corporativo</h3>
+          <p class="text-xs text-slate-400 mt-1">Para empresas de telecomunicaciones o software</p>
+          <div class="text-3xl font-extrabold text-white my-6">$199 <span class="text-xs font-normal text-slate-400">/mes</span></div>
+          <ul class="text-sm text-slate-400 space-y-3 mb-8">
+            <li>✔ Múltiples servidores interconectados por VLAN</li>
+            <li>✔ Balanceadores de carga y proxy inverso</li>
+            <li>✔ SLA contractual garantizado de respuesta en 15m</li>
+            <li>✔ Ingeniero de sistemas dedicado</li>
+          </ul>
+          <a href="#contacto" class="block text-center py-2.5 bg-slate-800 hover:bg-slate-700 text-white rounded-lg text-sm font-semibold transition">Solicitar</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección 5: Nosotros -->
+  <section id="nosotros" class="py-24 border-b border-slate-900 bg-slate-950">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="max-w-3xl">
+        <h2 class="text-xs uppercase font-bold tracking-widest text-blue-400 mb-2">Sobre Corenodes Tech</h2>
+        <h3 class="text-3xl font-bold text-white mb-6">Ingeniería de sistemas enfocada en estabilidad, privacidad y rendimiento</h3>
+        <p class="text-slate-400 text-sm leading-relaxed mb-4">
+          Corenodes Tech nació como un equipo técnico dedicado a resolver los problemas de disponibilidad y conectividad que enfrentan los desarrolladores independientes y las empresas de servicios.
+        </p>
+        <p class="text-slate-400 text-sm leading-relaxed">
+          Nuestra filosofía se basa en el uso de estándares abiertos, protocolos de seguridad modernos (como TLS 1.3, autenticación asimétrica y DNSSEC) y la estricta separación de ambientes para asegurar la continuidad de los servicios de cada cliente.
         </p>
       </div>
     </div>
+  </section>
 
-    <!-- Contacto -->
-    <div id="contacto" class="mt-24 bg-slate-900 border border-slate-800 p-8 rounded-2xl max-w-xl mx-auto text-center">
-      <h2 class="text-2xl font-bold text-white mb-2">Contacto técnico</h2>
-      <p class="text-slate-400 text-sm mb-6">Para auditorías de red o despliegue de nuevos entornos:</p>
-      <div class="inline-block bg-slate-800 text-blue-300 font-mono text-sm py-2 px-4 rounded border border-slate-700">
-        admin@corenodes.tech
+  <!-- Sección 6: Contacto y Soporte -->
+  <section id="contacto" class="py-24">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid lg:grid-cols-2 gap-12">
+        <div>
+          <h2 class="text-xs uppercase font-bold tracking-widest text-blue-400 mb-2">Contacto</h2>
+          <h3 class="text-3xl font-bold text-white mb-4">Inicie una consulta técnica</h3>
+          <p class="text-slate-400 text-sm leading-relaxed mb-8">
+            Nuestro equipo de ingenieros de guardia responderá a sus dudas de facturación, auditorías de red o peticiones de nuevos servidores en menos de 2 horas.
+          </p>
+
+          <div class="space-y-4">
+            <div class="flex items-center gap-4 text-sm text-slate-300">
+              <span class="w-10 h-10 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-center text-blue-400">✉</span>
+              <span><strong>Correo de operaciones:</strong> admin@corenodes.tech</span>
+            </div>
+            <div class="flex items-center gap-4 text-sm text-slate-300">
+              <span class="w-10 h-10 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-center text-blue-400">⚡</span>
+              <span><strong>Canal NOC:</strong> noc-alerts@corenodes.tech</span>
+            </div>
+            <div class="flex items-center gap-4 text-sm text-slate-300">
+              <span class="w-10 h-10 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-center text-blue-400">🌐</span>
+              <span><strong>Dominio verificado:</strong> corenodes.tech</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Formulario -->
+        <div class="bg-slate-900/60 border border-slate-800 p-8 rounded-2xl">
+          <form onsubmit="event.preventDefault(); alert('Mensaje enviado al equipo técnico de Corenodes.');" class="space-y-4">
+            <div>
+              <label class="block text-xs uppercase text-slate-400 font-semibold mb-2">Nombre completo</label>
+              <input type="text" required placeholder="Ing. Gabriela Martínez" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-2.5 text-sm text-white focus:outline-none focus:border-blue-500">
+            </div>
+            <div>
+              <label class="block text-xs uppercase text-slate-400 font-semibold mb-2">Correo corporativo</label>
+              <input type="email" required placeholder="contacto@empresa.com" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-2.5 text-sm text-white focus:outline-none focus:border-blue-500">
+            </div>
+            <div>
+              <label class="block text-xs uppercase text-slate-400 font-semibold mb-2">Tipo de consulta</label>
+              <select class="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-2.5 text-sm text-white focus:outline-none focus:border-blue-500">
+                <option>Aprovisionamiento de nuevo servidor Linux</option>
+                <option>Configuración de pasarela de correo y rDNS</option>
+                <option>Auditoría de seguridad y firewall</option>
+                <option>Otro soporte técnico</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-xs uppercase text-slate-400 font-semibold mb-2">Detalles del proyecto</label>
+              <textarea rows="4" required placeholder="Describa los requerimientos de cómputo, volumen de tráfico y distribución..." class="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-2.5 text-sm text-white focus:outline-none focus:border-blue-500"></textarea>
+            </div>
+            <button type="submit" class="w-full bg-blue-600 hover:bg-blue-500 text-white font-semibold py-3 rounded-lg text-sm transition shadow-lg shadow-blue-600/25">
+              Enviar solicitud
+            </button>
+          </form>
+        </div>
       </div>
     </div>
-  </main>
+  </section>
 
   <!-- Footer -->
-  <footer class="border-t border-slate-800 py-6 text-center text-xs text-slate-500">
-    &copy; 2026 CoreNodes Tech. Todos los derechos reservados.
+  <footer class="border-t border-slate-800 py-12 bg-slate-950">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+      <div class="text-sm text-slate-500">
+        &copy; 2026 CoreNodes Tech. Todos los derechos reservados. Operaciones bajo estándares RFC e infraestructuras cloud certificadas.
+      </div>
+      <div class="flex gap-6 text-xs text-slate-400">
+        <a href="#seguridad" class="hover:text-white transition">Políticas Anti-Spam</a>
+        <a href="#seguridad" class="hover:text-white transition">Términos de Servicio</a>
+        <a href="#contacto" class="hover:text-white transition">Contacto Legal</a>
+      </div>
+    </div>
   </footer>
 
 </body>
