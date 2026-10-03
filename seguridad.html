@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Políticas & Seguridad | Corenodes Tech</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-950 text-slate-200 font-sans min-h-screen flex flex-col justify-between">
+  <header class="border-b border-slate-800 bg-slate-950/90 sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+      <a href="index.html" class="text-2xl font-bold tracking-tight text-white flex items-center gap-2">
+        <span class="w-3.5 h-3.5 rounded-full bg-blue-500"></span>Corenodes<span class="text-blue-500">.tech</span>
+      </a>
+      <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-slate-300">
+        <a href="servicios.html" class="hover:text-blue-400 transition">Servicios</a>
+        <a href="infraestructura.html" class="hover:text-blue-400 transition">Infraestructura</a>
+        <a href="seguridad.html" class="text-blue-400 font-semibold">Seguridad</a>
+        <a href="planes.html" class="hover:text-blue-400 transition">Planes</a>
+        <a href="nosotros.html" class="hover:text-blue-400 transition">Nosotros</a>
+        <a href="contacto.html" class="hover:text-blue-400 transition">Contacto</a>
+      </nav>
+      <div><a href="contacto.html" class="bg-blue-600 hover:bg-blue-500 text-white text-sm font-semibold px-5 py-2.5 rounded-lg transition">Portal Clientes</a></div>
+    </div>
+  </header>
+
+  <main class="max-w-7xl mx-auto px-6 py-16">
+    <div class="max-w-3xl mb-16">
+      <h1 class="text-4xl font-extrabold text-white mb-4">Políticas de Uso Aceptable y Seguridad</h1>
+      <p class="text-slate-400 text-lg leading-relaxed">
+        Mantenemos estándares técnicos para garantizar la limpieza de nuestro rango IP y la continuidad operativa sin spam ni abusos.
+      </p>
+    </div>
+
+    <div class="space-y-8">
+      <div class="bg-slate-900/60 border border-slate-800 p-8 rounded-2xl">
+        <h2 class="text-2xl font-bold text-white mb-3">Política Anti-Spam de Tolerancia Cero</h2>
+        <p class="text-slate-400 text-sm leading-relaxed mb-4">
+          Corenodes Tech no tolera el envío masivo de correos electrónicos no solicitados (spam). Cualquier tráfico que salga de nuestros servidores asignados debe ser estrictamente transaccional, autenticado con opt-in previo de parte de los destinatarios. La emisión de correo a bases de datos compradas o recopiladas automáticamente resulta en la terminación inmediata del nodo.
+        </p>
+      </div>
+
+      <div class="bg-slate-900/60 border border-slate-800 p-8 rounded-2xl">
+        <h2 class="text-2xl font-bold text-white mb-3">Estándares Obligatorios de Autenticación</h2>
+        <p class="text-slate-400 text-sm leading-relaxed mb-4">
+          Todos los servidores dedicados que transmitan mensajes deben implementar la triada estándar de validación criptográfica:
+        </p>
+        <ul class="text-xs text-slate-400 space-y-3">
+          <li>• <strong>SPF (Sender Policy Framework):</strong> Autorización expresa de las IPs con permiso de emisión mediante registro DNS TXT.</li>
+          <li>• <strong>DKIM (DomainKeys Identified Mail):</strong> Firma asimétrica con par de claves RSA 2048-bit por cada encabezado saliente.</li>
+          <li>• <strong>DMARC:</strong> Definición clara de política de reporte y acción frente a posibles intentos de spoofing.</li>
+        </ul>
+      </div>
+
+      <div class="bg-slate-900/60 border border-slate-800 p-8 rounded-2xl">
+        <h2 class="text-2xl font-bold text-white mb-3">Canal de Denuncias de Abuso</h2>
+        <p class="text-slate-400 text-sm leading-relaxed">
+          Para notificar irregularidades técnicas o reportes de listas negras, nuestro equipo NOC procesa solicitudes en menos de 12 horas en el buzón: <span class="text-blue-400 font-mono">abuse@corenodes.tech</span>.
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="border-t border-slate-800 py-10 bg-slate-950 text-center text-sm text-slate-500">
+    &copy; 2026 CoreNodes Tech. Infraestructura empresarial verificada.
+  </footer>
+</body>
+</html>
